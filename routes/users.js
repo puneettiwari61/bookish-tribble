@@ -12,6 +12,7 @@ router.get('/', function(req, res, next) {
 
 router.post('/', function(req,res,next) {
   console.log('its a post', req)
+  req.body.text = "its working"
   const {challenge} = req.body
   res.json({challenge})
 })
